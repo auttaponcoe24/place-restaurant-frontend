@@ -17,7 +17,7 @@ export default function Home() {
 	// console.log(restaurant);
 
 	return (
-		<div className="px-4 py-2 flex flex-col gap-4">
+		<div className="px-4 py-2 flex flex-col gap-4 max-w-[1440px] mx-auto">
 			<div className="flex items-center justify-between px-8">
 				<h1 className="text-2xl">Place List</h1>
 				<div className="flex items-center gap-4">

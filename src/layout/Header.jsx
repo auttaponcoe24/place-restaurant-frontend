@@ -2,13 +2,19 @@ import React from "react";
 import { IoIosNotifications, IoIosArrowDown } from "react-icons/io";
 import logo from "../assets/img/logo.png";
 import profileBlank from "../assets/img/profile-blank.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+	const navigate = useNavigate();
+
 	return (
 		<header className="flex items-center justify-between px-4 py-2 bg-primary text-white">
-			<div className="w-8 h-8 rounded-lg overflow-hidden">
+			<button
+				onClick={() => navigate(`/`)}
+				className="w-8 h-8 rounded-lg overflow-hidden"
+			>
 				<img src={logo} alt="" className="w-full h-full object-cover" />
-			</div>
+			</button>
 			<div className="flex items-center gap-4">
 				<div className="relative">
 					<div className="absolute top-0 right-1 z-10 w-2 h-2 bg-red-600 rounded-full"></div>
