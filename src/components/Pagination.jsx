@@ -27,7 +27,8 @@ export default function Pagination({ data, search, selected }) {
 				.filter((item) => {
 					return search.toLowerCase() === ""
 						? item
-						: item.name.toLowerCase().includes(search);
+						: item.name.toLowerCase().includes(search) ||
+								item.name.includes(search);
 				})
 				.filter((item) => {
 					return selected === "" ? item : item.categories.includes(selected);
@@ -36,7 +37,7 @@ export default function Pagination({ data, search, selected }) {
 					return <RestaurantList key={item.id} data={item} />;
 				})}
 
-			<div className="col-span-12 mx-auto">
+			<div className="col-span-12 mx-auto mt-4">
 				<ReactPaginate
 					breakLabel="..."
 					nextLabel=">"
