@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import useRestaurant from "../hooks/use-restaurant";
-import Button from "../components/Button";
 import RestaurantList from "../features/restaurant/RestaurantList";
 import { Input } from "@material-tailwind/react";
 import { IoMdSearch } from "react-icons/io";
@@ -17,11 +16,13 @@ export default function Home() {
 	// console.log(restaurant);
 
 	return (
-		<div className="px-4 py-2 flex flex-col gap-4 max-w-[1440px] mx-auto">
-			<div className="flex items-center justify-between px-8">
-				<h1 className="text-2xl">Place List</h1>
-				<div className="flex items-center gap-4">
-					<div className="relative h-10 w-72 min-w-[200px]">
+		<div className="max-w-[1440px] px-4 py-2 flex flex-col gap-4  mx-auto ">
+			{/* <div className="flex items-center justify-between px-8"> */}
+			<div className="flex flex-col md:flex-row items-center justify-between gap-2">
+				<h1 className="text-2xl self-start md:w-full">Place List</h1>
+				{/* select and search */}
+				<div className="flex flex-col w-full md:flex-row items-center gap-4 ">
+					<div className="relative h-10 w-full md:w-72">
 						<select
 							className="border border-gray-400 w-full p-2 rounded-lg outline-none text-[#605C5C] text-sm"
 							label="Restaurant"
@@ -33,8 +34,8 @@ export default function Home() {
 							<option value="cafe">Cafe</option>
 						</select>
 					</div>
-					<div> | </div>
-					<div className="w-72 relative">
+					<div className="hidden md:block"> | </div>
+					<div className="w-full relative md:w-72">
 						<Input
 							label="Search name..."
 							onChange={(e) => setSearch(e.target.value)}
