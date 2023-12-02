@@ -16,12 +16,12 @@ export default function Home() {
 	// console.log(restaurant);
 
 	return (
-		<div className="max-w-[1440px] px-4 py-2 flex flex-col gap-4  mx-auto ">
+		<div className="max-w-[1440px] px-4 py-2 flex flex-col gap-4 mx-auto ">
 			{/* <div className="flex items-center justify-between px-8"> */}
-			<div className="flex flex-col md:flex-row items-center justify-between gap-2">
-				<h1 className="text-2xl self-start md:w-full">Place List</h1>
+			<div className="flex flex-col md:flex-row items-center justify-between gap-2 mt-1">
+				<h1 className="text-2xl self-start md:w-full ml-6">Place List</h1>
 				{/* select and search */}
-				<div className="flex flex-col w-full md:flex-row items-center gap-4 ">
+				<div className="flex flex-col w-full md:flex-row items-center gap-4 flex-1 mr-6">
 					<div className="relative h-10 w-full md:w-72">
 						<select
 							className="border border-gray-400 w-full p-2 rounded-lg outline-none text-[#605C5C] text-sm"
