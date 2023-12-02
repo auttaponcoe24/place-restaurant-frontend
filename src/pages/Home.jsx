@@ -3,6 +3,7 @@ import useRestaurant from "../hooks/use-restaurant";
 import RestaurantList from "../features/restaurant/RestaurantList";
 import { Input } from "@material-tailwind/react";
 import { IoMdSearch } from "react-icons/io";
+import Pagination from "../components/Pagination";
 
 export default function Home() {
 	const { fetchRestaurant, restaurant } = useRestaurant();
@@ -17,7 +18,6 @@ export default function Home() {
 
 	return (
 		<div className="max-w-[1440px] px-4 py-2 flex flex-col gap-4 mx-auto ">
-			{/* <div className="flex items-center justify-between px-8"> */}
 			<div className="flex flex-col md:flex-row items-center justify-between gap-2 mt-1">
 				<h1 className="text-2xl self-start md:w-full ml-6">Place List</h1>
 				{/* select and search */}
@@ -48,7 +48,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="grid grid-cols-12 gap-4">
-				{restaurant
+				{/* {restaurant
 					.filter((item) => {
 						return search.toLowerCase() === ""
 							? item
@@ -59,7 +59,8 @@ export default function Home() {
 					})
 					.map((item) => (
 						<RestaurantList key={item.id} data={item} />
-					))}
+					))} */}
+				<Pagination data={restaurant} search={search} selected={selected} />
 			</div>
 		</div>
 	);
